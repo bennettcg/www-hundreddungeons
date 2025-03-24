@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hundred Dungeons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <div class="container container-fluid" id="sheet-container">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col">
+                        <div class="row sheet-header">
+                            <div id="sheet-title">HUNDRED DUNGEONS</div>
+                            <div id="sheet-subtitle">CHARACTER SHEET</div>
+                        </div>  
+                    </div>
+                    <div class="col-7"></div>
+                </div>
+                <div class="row">
+
+                    <div class="col-8" id="char-abilities">
+                        <div class="container input-wrapper my-2" id="character-name-class-level-container">
+                            <div class="row row-cols-2" id="character-name-class-input">
+                                <div class="col-7" id="character-name-input">
+                                    &nbsp;
+                                </div>
+                                <div class="col-5" id="character-class-level-input">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="row row-cols-2" id="character-name-class-label">
+                                <div class="col-7 cs-field-label" id="character-name-label">CHARACTER NAME</div>
+                                <div class="col-5 cs-field-label" id="character-class-level-label">CLASS & LEVEL</div>
+                            </div>
+                        </div>
+
+                        <div class="container my-2" id="character-type-langauges">
+                            <div class="row">
+                                <div class="col-4 input-wrapper me-2">
+                                    <div class="row">
+                                        <div class="col-5 cs-field-label pe-0">CREATURE TYPE</div>
+                                        <div class="col cs-field-input" id="character-creature-type-input">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="col input-wrapper">
+                                    <div class="row">
+                                        <div class="col-2 cs-field-label pe-0">LANGUAGES</div>
+                                        <div class="col cs-field-input" id="character-languages-input">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container my-2" id="character-attributes-hexes">
+                            <div class="row row-cols-6 h-100 position-relative">
+                                <div class="w-100 position-absolute" id="row-attribute-hexes"></div>
+                                <div class="position-relative col h-100" id="attribute-hex-strength">
+                                    <div class="hexagon-outer position-absolute"></div>
+                                    <div class="hexagon position-absolute"></div>
+                                    <div class="hexagon-inner position-absolute"></div>
+                                    <div class="pentagon position-absolute"></div>
+                                    <div class="position-absolute attribute-label">STRENGTH</div>
+                                </div>
+                                <div class="position-relative col h-100" id="attribute-hex-dexterity">
+                                    <div class="hexagon position-absolute"></div>
+                                    <div class="hexagon-inner position-absolute"></div>
+                                    <div class="pentagon position-absolute"></div>
+                                    <div class="position-absolute attribute-label">DEXTERITY</div>
+                                </div>
+                                <div class="position-relative col h-100" id="attribute-hex-constitution">
+                                    <div class="hexagon position-absolute"></div>
+                                    <div class="hexagon-inner position-absolute"></div>
+                                    <div class="pentagon position-absolute"></div>
+                                    <div class="position-absolute attribute-label">CONSTITUTION</div>
+                                </div>
+                                <div class="position-relative col h-100" id="attribute-hex-intelligence">
+                                    <div class="hexagon position-absolute"></div>
+                                    <div class="hexagon-inner position-absolute"></div>
+                                    <div class="pentagon position-absolute"></div>
+                                    <div class="position-absolute attribute-label">INTELLIGENCE</div>
+                                </div>
+                                <div class="position-relative col h-100" id="attribute-hex-wisdom">
+                                    <div class="hexagon position-absolute"></div>
+                                    <div class="hexagon-inner position-absolute"></div>
+                                    <div class="pentagon position-absolute"></div>
+                                    <div class="position-absolute attribute-label">WISDOM</div>
+                                </div>
+                                <div class="position-relative col h-100" id="attribute-hex-charisma">
+                                    <div class="hexagon position-absolute"></div>
+                                    <div class="hexagon-inner position-absolute"></div>
+                                    <div class="pentagon position-absolute"></div>
+                                    <div class="position-absolute attribute-label">CHARISMA</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container my-2" id="character-traits">
+                            <div class="row">
+                                <div class="col">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container my-2" id="character-exhaustion">
+                            <div class="row">
+                                <div class="col">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4" id="char-skills">
+                        &nbsp;
+                    </div>    
+                </div>
+        </div>
+    </main>
+  </body>
+</html>

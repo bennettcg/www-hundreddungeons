@@ -4,3 +4,145 @@ html, body {
 body {
     background: radial-gradient(#271d30, #0d0a10, #000000);
 }
+#sheet-container {
+    background: #ffffff;
+    color: #72715b;
+    font-family: "Arial Black";
+}
+.sheet-header {
+    text-align: center;
+}
+.input-wrapper {
+    border: .2rem solid #72715b;
+}
+.input-field {
+    background-color: #ffffff;
+}
+.input-label {
+    background-color: #e0e0d6;
+    font-size: .6em;
+}
+.cs-field-input {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: .7rem;
+}
+.cs-field-label {
+    background-color: #e0e0d6;
+    font-size: .7rem;
+    color: #000000;
+}
+.hexagon {
+    --b: .5rem;
+    height: 9.5rem;
+    aspect-ratio: cos(30deg);
+    clip-path: 
+      polygon(50% 0,-50% 50%,50% 100%,150% 50%,50% 0,
+      50% var(--b),
+      calc(100% - var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+      calc(100% - var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+      50% calc(100% - var(--b)),
+      calc(var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+      calc(var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+      50% var(--b));
+      background: #72715b;
+      z-index: 4;
+}
+.hexagon-inner {
+    --b: .5rem;
+    height: 9.5rem;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+      background: #ffffff;
+      z-index: 2;
+}
+.hexagon-outer {
+    --b: .5rem;
+    height: 8.5rem;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+    background: #bbbaa7;
+    z-index: 1;
+}
+.pentagon {
+    --b: .5rem;
+    height: 9.5rem;
+    aspect-ratio: cos(30deg);
+    clip-path: 
+    polygon(5% 60%, 95% 60%, 95% 72%, 50% 95%, 5% 72%);
+    z-index: 2;
+    background: #e0e0d6
+}
+#sheet-title {
+    font-size: 1.25em;
+    color: #72715b;
+    box-shadow:
+       inset 4.25em 0 0 0 #ffffff,
+       inset -4.25em 0 0 0 #ffffff,
+       inset 0 -.1em 0 0 #bbbaa7;
+}
+#sheet-subtitle {
+    font-size: .6em;
+    color: #bbbaa7;
+}
+#char-abilities {
+    color: #000000;
+    font-family: 'Arial';
+    font-weight: 600;
+}
+#char-skills {
+    background-color: blue;;
+}
+#character-attributes-hexes {
+    height: 9.5rem;
+}
+.attribute-label {
+    bottom: 28%;
+    z-index: 3;
+    width: 8.2rem;
+    text-align: center;
+    color: #000000;
+    font-size: .7rem;
+}
+#row-attribute-hexes {
+    background-color: #bbbaa7;
+    border: .5rem solid #bbbaa7;
+    border-radius: .6rem;
+    clip-path: polygon(0% 0%,
+                       13.5% 0%,
+                       17.5% 15%,
+                       21.5% 0%,
+                       30% 0%,
+                       34.1% 15%,
+                       38% 0%,
+                       47% 0%,
+                       50.8% 15%,
+                       54.5% 0%,
+                       64% 0%,
+                       67.5% 15%,
+                       71% 0%, 
+                       80.5% 0%, 
+                       84.2% 15%,
+                       88% 0%,
+                       100% 0%,
+                       100% 100%,
+                       88% 100%,
+                       84.2% 85%,
+                       80.5% 100%,
+                       71% 100%,
+                       67.5% 85%,
+                       64% 100%,
+                       54.5% 100%,
+                       50.8% 85%,
+                       47% 100%,
+                       38% 100%,
+                       34% 85%,
+                       30% 100%, 
+                       21.5% 100%, 
+                       17.5% 85%,
+                       13.5% 100%,
+                       0% 100%);
+    bottom: 10%;
+    height: 7.7rem;
+    z-index: 2;
+}
