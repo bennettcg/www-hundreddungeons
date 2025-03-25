@@ -12,7 +12,7 @@
   </head>
   <body>
     <main>
-        <div class="container container-fluid" id="sheet-container">
+        <div class="container" id="sheet-container">
                 <div class="row">
                     <div class="col-1"></div>
                     <div class="col">
@@ -141,9 +141,99 @@
                         </div>
 
                         <div class="container my-2" id="character-exhaustion">
-                            <div class="row">
-                                <div class="col">
-                                    &nbsp;
+                            <div class="row position-relative">
+                                <div class="position-absolute" id="exhaustion-breadcrumb"></div>
+                                <div class="position-relative">
+                                    <div class="position-absolute sidebar-label" id="exhaustion-label">EXHAUSTION</div>
+                                </div>
+                              
+                                <div class="position-relative col">
+                                    <div class="check-label-above w-100">
+                                        <label class="form-check-label" for="character-exhaustion-1">1</label>
+                                    </div>
+                                    <div class="form-check">                                        
+                                        <input class="form-check-input exhaustion-check" type="checkbox" id="character-exhaustion-1" value="1">
+                                    </div>
+                                    <div class="check-label-below w-100">
+                                        <label class="form-check-label" for="character-exhaustion-1">CAN'T TAKE REACTIONS</label>
+                                    </div>    
+                                </div>
+                                <div class="position-relative col">
+                                    <div class="check-label-above w-100">
+                                        <label class="form-check-label" for="character-exhaustion-2">2</label>
+                                    </div>
+                                    <div class="form-check">                                        
+                                        <input class="form-check-input exhaustion-check" type="checkbox" id="character-exhaustion-2" value="2">
+                                    </div>
+                                    <div class="check-label-below w-100">
+                                        <label class="form-check-label" for="character-exhaustion-2">1 ACTION OR QUICK ACTION PER TURN</label>
+                                    </div>    
+                                </div>
+                                <div class="position-relative col">
+                                    <div class="check-label-above w-100">
+                                        <label class="form-check-label" for="character-exhaustion-3">3</label>
+                                    </div>
+                                    <div class="form-check">                                        
+                                        <input class="form-check-input exhaustion-check" type="checkbox" id="character-exhaustion-3" value="3">
+                                    </div>
+                                    <div class="check-label-below w-100">
+                                        <label class="form-check-label" for="character-exhaustion-3">YOU CAN'T USE SKILLS</label>
+                                    </div>    
+                                </div>
+                                <div class="position-relative col">
+                                    <div class="check-label-above w-100">
+                                        <label class="form-check-label" for="character-exhaustion-4">4</label>
+                                    </div>
+                                    <div class="form-check">                                        
+                                        <input class="form-check-input exhaustion-check" type="checkbox" id="character-exhaustion-4" value="4">
+                                    </div>
+                                    <div class="check-label-below w-100">
+                                        <label class="form-check-label" for="character-exhaustion-4">STR, DEX, CON ARE WEAK</label>
+                                    </div>    
+                                </div>
+                                <div class="position-relative col">
+                                    <div class="check-label-above w-100">
+                                        <label class="form-check-label" for="character-exhaustion-5">5</label>
+                                    </div>
+                                    <div class="form-check">                                        
+                                        <input class="form-check-input exhaustion-check" type="checkbox" id="character-exhaustion-5" value="5">
+                                    </div>
+                                    <div class="check-label-below w-100">
+                                        <label class="form-check-label" for="character-exhaustion-6">INT, WIS, CHA ARE WEAK</label>
+                                    </div>    
+                                </div>
+                                <div class="position-relative col">
+                                    <div class="check-label-above w-100">
+                                        <label class="form-check-label" for="character-exhaustion-6">6</label>
+                                    </div>
+                                    <div class="form-check">                                        
+                                        <input class="form-check-input exhaustion-check" type="checkbox" id="character-exhaustion-6" value="6">
+                                    </div>
+                                    <div class="check-label-below w-100">
+                                        <label class="form-check-label" for="character-exhaustion-6">SLOWED</label>
+                                    </div>    
+                                </div>
+                                <div class="position-relative col">
+                                    <div class="check-label-above w-100">
+                                        <label class="form-check-label" for="character-exhaustion-7">7</label>
+                                    </div>
+                                    <div class="form-check">                                        
+                                        <input class="form-check-input exhaustion-check" type="checkbox" id="character-exhaustion-7" value="7">
+                                    </div>
+                                    <div class="check-label-below w-100">
+                                        <label class="form-check-label" for="character-exhaustion-7">STUNNED</label>
+                                    </div>    
+                                </div>
+                                <div class="position-relative col">
+                                    <div class="check-label-above w-100">
+                                        <label class="form-check-label" for="character-exhaustion-8">8</label>
+                                    </div>
+                                    <div class="form-check">                                        
+                                        <input class="form-check-input exhaustion-check" type="checkbox" id="character-exhaustion-8" value="8">
+                                    </div>
+                                    <div class="check-label-below w-100">
+                                        <label class="form-check-label" for="character-exhaustion-8">DEAD</label>
+                                    </div>    
                                 </div>
                             </div>
                         </div>
