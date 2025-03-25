@@ -73,6 +73,21 @@ body {
     z-index: 2;
     background: #e0e0d6
 }
+.cs-table-caption {
+    background-color: #72715b;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Arial Black';
+    border-bottom: .6rem double #ffffff;
+}
+.cs-tr-dark .cs-table-cell {
+    background-color: #e0e0d6;
+    color: #000000;
+}
+.cs-tr-light .cs-table-cell {
+    background-color:#ffffff;
+    color: #000000;
+}
 #sheet-title {
     font-size: 1.25em;
     color: #72715b;
