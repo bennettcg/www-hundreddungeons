@@ -25,7 +25,7 @@
                 </div>
                 <div class="row">
 
-                    <div class="col-8" id="char-abilities">
+                    <div class="col-8" id="cs-upper-left">
                         <div class="container input-wrapper my-2" id="character-name-class-level-container">
                             <div class="row row-cols-2" id="character-name-class-input">
                                 <div class="col-7" id="character-name-input">
@@ -60,6 +60,7 @@
 
                         <div class="container my-2" id="character-attributes-hexes">
                             <div class="row row-cols-6 h-100 position-relative">
+                                <div class="position-absolute sidebar-label" id="abilities-label">ABILITY SCORES</div>
                                 <div class="w-100 position-absolute" id="row-attribute-hexes"></div>
                                 <div class="position-relative col h-100" id="attribute-hex-strength">
                                     <div class="hexagon position-absolute"></div>
@@ -239,8 +240,52 @@
                         </div>
                     </div>
 
-                    <div class="col-4" id="char-skills">
-                        &nbsp;
+                    <div class="col-4" id="cs-upper-right">
+                        <div class="container my-2 position-relative">
+                            <div class="row">
+                                <div class="col-3 input-wrapper px-0">
+                                    <div class="row mx-0" id="character-name-class-input">
+                                        <div class="col px-0" id="character-experience-current">
+
+                                        </div>
+                                        /
+                                        <div class="col px-0" id="character-class-level-input">
+
+                                        </div>
+                                    </div>
+                                    <div class="row mx-0">
+                                        <div class="col-12 cs-field-label" id="character-experience-label">EXPERIENCE</div>
+                                    </div>
+
+                                </div>
+                                <div class="col-1 px-1" id="trained-check-wrapper">
+                                    <div class="check-label-above">
+                                        <label class="form-check-label" id="character-trained-label" for="character-trained-check">TRAINED</label>
+                                    </div>
+                                    <div class="form-check p-0">                                        
+                                        <input class="form-check-input exhaustion-check m-0" type="checkbox" id="character-trained-check" value="1">
+                                    </div>
+                                </div>   
+                                <div class="col-5 position-relative">
+                                    <div class="renown-pentagon-dark position-absolute"></div>
+                                    <div class="renown-pentagon-light position-absolute"></div>
+                                    <div class="renown-pentagon-white position-absolute"></div>
+                                    RENOWN
+                                </div>
+                                <div class="col-3 position-relative">
+                                    INSP
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="container my-2">
+                            <div class="row cs-table-caption" id="cs-skills-caption-wrapper">
+                                
+                                <div class="col" id="cs-skills-caption">
+                                    SKILLS
+                                </div>
+                            </div>
+                        </div>
                     </div>    
                 </div>
         </div>

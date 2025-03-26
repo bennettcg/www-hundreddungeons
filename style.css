@@ -34,7 +34,7 @@ body {
 }
 .hexagon {
     --b: .5rem;
-    height: 9.5rem;
+    height: 100%;
     aspect-ratio: cos(30deg);
     clip-path: 
       polygon(50% 0,-50% 50%,50% 100%,150% 50%,50% 0,
@@ -50,7 +50,7 @@ body {
 }
 .hexagon-inner {
     --b: .5rem;
-    height: 9.5rem;
+    height: 100%;
     aspect-ratio: cos(30deg);
     clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
       background: #ffffff;
@@ -58,7 +58,7 @@ body {
 }
 .hexagon-outer {
     --b: .5rem;
-    height: 8.5rem;
+    height: 100%;
     aspect-ratio: cos(30deg);
     clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
     background: #bbbaa7;
@@ -66,12 +66,39 @@ body {
 }
 .pentagon {
     --b: .5rem;
-    height: 9.5rem;
+    height: 100%;
     aspect-ratio: cos(30deg);
     clip-path: 
     polygon(5% 60%, 95% 60%, 95% 72%, 50% 95%, 5% 72%);
     z-index: 2;
     background: #e0e0d6
+}
+.renown-pentagon-dark {
+    height: 7rem;
+    bottom: -3.7rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 70% 81%, 30% 81%);
+    z-index: 5;
+    background: #72715b;
+    left: 0rem;
+}
+.renown-pentagon-light {
+    height: 6rem;
+    bottom: -3.2rem;
+    left: 0.5rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 70% 80%, 30% 80%);
+    z-index: 6;
+    background: #e0e0d6;
+}
+.renown-pentagon-white {
+    height: 4.5rem;
+    bottom: -2.4rem;
+    left: 1.3rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 80% 70%, 20% 70%);
+    z-index: 7;
+    background: #ffffff;
 }
 .cs-table-caption {
     background-color: #72715b;
@@ -100,21 +127,23 @@ body {
     font-size: .6em;
     color: #bbbaa7;
 }
-#char-abilities {
+#cs-upper-left {
     color: #000000;
     font-family: 'Arial';
     font-weight: 600;
 }
-#char-skills {
-    background-color: blue;;
+#cs-upper-right {
+    color: #000000;
+    font-family: 'Arial';
+    font-weight: 600;
 }
 #character-attributes-hexes {
-    height: 9.5rem;
+    height: 8.7rem;
 }
 .attribute-label {
-    bottom: 28%;
+    bottom: 29%;
     z-index: 3;
-    width: 8.2rem;
+    width: 84.5%;
     text-align: center;
     color: #000000;
     font-size: .7rem;
@@ -124,41 +153,41 @@ body {
     border: .5rem solid #bbbaa7;
     border-radius: .6rem;
     clip-path: polygon(0% 0%,
-                       13.5% 0%,
-                       17.5% 15%,
-                       21.5% 0%,
-                       30% 0%,
-                       34.1% 15%,
-                       38% 0%,
-                       47% 0%,
-                       50.8% 15%,
-                       54.5% 0%,
-                       64% 0%,
-                       67.5% 15%,
-                       71% 0%, 
-                       80.5% 0%, 
-                       84.2% 15%,
-                       88% 0%,
+                       13% 0%,
+                       16.7% 17%,
+                       20.7% 0%,
+                       29.5% 0%,
+                       33.4% 17%,
+                       37.3% 0%,
+                       46% 0%,
+                       50% 17%,
+                       54% 0%,
+                       62.7% 0%,
+                       66.6% 17%,
+                       70.7% 0%, 
+                       79.5% 0%, 
+                       83.3% 17%,
+                       87.3% 0%,
                        100% 0%,
                        100% 100%,
-                       88% 100%,
-                       84.2% 85%,
-                       80.5% 100%,
-                       71% 100%,
-                       67.5% 85%,
-                       64% 100%,
-                       54.5% 100%,
-                       50.8% 85%,
-                       47% 100%,
-                       38% 100%,
-                       34% 85%,
-                       30% 100%, 
-                       21.5% 100%, 
-                       17.5% 85%,
-                       13.5% 100%,
+                       87.3% 100%,
+                       83.3% 83%,
+                       79.5% 100%,
+                       70.7% 100%,
+                       66.6% 83%,
+                       62.7% 100%,
+                       54% 100%,
+                       49.8% 83%,
+                       46% 100%,
+                       37.3% 100%,
+                       33.4% 83%,
+                       29.5% 100%, 
+                       20.7% 100%, 
+                       16.7% 83%,
+                       13% 100%,
                        0% 100%);
-    bottom: 10%;
-    height: 7.7rem;
+    bottom: .9rem;
+    height: 6.9rem;
     z-index: 2;
 }
 .exhaustion-check {
@@ -178,8 +207,8 @@ body {
 }
 #exhaustion-breadcrumb {
     background-color: #bbbaa7;
-    height: .4rem;
-    top: 1.55rem;
+    height: .3rem;
+    top: 1.65rem;
     width: 89%;
     margin: 0 auto 0 3rem;
 }
@@ -188,5 +217,26 @@ body {
     font-size: .6rem;
     color: #bbbaa7;
     left: -1.6rem;
-    top: 2rem;
+    top: 2.7rem;
+    font-family: 'Arial Black';
+}
+#abilities-label {
+    color: #ffffff;
+    z-index: 6;
+    left: -4.1rem;
+    top: 3.1rem;
+}
+#character-trained-label {
+    color: #000000;
+    font-size: .4rem;
+}
+#character-trained-check {
+    margin-left: .4rem !important;
+}
+#cs-skills-caption-wrapper {
+    width: 50%;
+}
+#cs-skills-caption {
+    text-align: left;
+    left: 2rem;
 }
