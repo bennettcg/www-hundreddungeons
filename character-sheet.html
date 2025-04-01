@@ -42,23 +42,23 @@
                         </div>
 
                         <div class="container my-2" id="character-type-langauges">
-                            <div class="row">
+                            <div class="row ">
                                 <div class="col-4 input-wrapper me-2">
-                                    <div class="row">
-                                        <div class="col-5 cs-field-label pe-0">CREATURE TYPE</div>
-                                        <div class="col cs-field-input" id="character-creature-type-input">&nbsp;</div>
+                                    <div class="row type-language position-relative">
+                                        <div class="col-5 cs-field-label pe-0 h-100 position-absolute">CREATURE TYPE</div>
+                                        <div class="col cs-field-input h-100 position-absolute w-50" id="character-creature-type-input">&nbsp;</div>
                                     </div>
                                 </div>
                                 <div class="col input-wrapper">
-                                    <div class="row">
-                                        <div class="col-2 cs-field-label pe-0">LANGUAGES</div>
-                                        <div class="col cs-field-input" id="character-languages-input">&nbsp;</div>
+                                    <div class="row type-language position-relative">
+                                        <div class="col-2 cs-field-label pe-0 position-absolute h-100">LANGUAGES</div>
+                                        <div class="col cs-field-input position-absolute h-100 w-75" id="character-languages-input">&nbsp;</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="container my-2" id="character-attributes-hexes">
+                        <div class="container" id="character-attributes-hexes">
                             <div class="row row-cols-6 h-100 position-relative">
                                 <div class="position-absolute sidebar-label" id="abilities-label">ABILITY SCORES</div>
                                 <div class="w-100 position-absolute" id="row-attribute-hexes"></div>
@@ -243,13 +243,13 @@
                     <div class="col-4" id="cs-upper-right">
                         <div class="container my-2 position-relative">
                             <div class="row">
-                                <div class="col-3 input-wrapper px-0">
-                                    <div class="row mx-0" id="character-name-class-input">
+                                <div class="col-4 input-wrapper px-0">
+                                    <div class="row mx-0" id="character-experience-input">
                                         <div class="col px-0" id="character-experience-current">
 
                                         </div>
                                         /
-                                        <div class="col px-0" id="character-class-level-input">
+                                        <div class="col px-0" id="character-experience-to-level">
 
                                         </div>
                                     </div>
@@ -266,7 +266,7 @@
                                         <input class="form-check-input exhaustion-check m-0" type="checkbox" id="character-trained-check" value="1">
                                     </div>
                                 </div>   
-                                <div class="col-5 position-relative">
+                                <div class="col-4 position-relative">
                                     <div class="renown-pentagon-dark position-absolute"></div>
                                     <div class="renown-pentagon-light position-absolute"></div>
                                     <div class="renown-pentagon-white position-absolute"></div>
@@ -274,7 +274,10 @@
                                     <div class="position-absolute" id="renown-label">RENOWN</div>                                
                                 </div>
                                 <div class="col-3 position-relative">
-                                    INSP
+                                    <div class="inspiration-rhombus-dark position-absolute"></div>
+                                    <div class="inspiration-rhombus-light position-absolute"></div>
+                                    <div class="inspiration-pentagon-white position-absolute"></div>
+                                    <div class="position-absolute" id="inspiration-label">INSP</div> 
                                 </div> 
                             </div>
                         </div>
@@ -285,9 +288,73 @@
                                 <div class="col" id="cs-skills-caption">
                                     SKILLS
                                 </div>
+                                
+                            </div>
+                            <div class="row cs-tr-light" >
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-1">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-dark">
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-2">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-light" >
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-3">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-dark">
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-4">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-light" >
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-5">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-dark">
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-6">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-light" >
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-7">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-dark">
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-8">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-light" >
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-9">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-dark">
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-10">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-light" >
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-11">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="row cs-tr-dark">
+                                <div class="col ps-0 pe-1">
+                                    <div class="cs-table-cell" id="character-skill-12">&nbsp;</div>
+                                </div>
                             </div>
                         </div>
                     </div>    
+                </div>
+                <div class="row">
+                    <div class="container my-2" id="character-exhaustion"></div>
                 </div>
         </div>
     </main>
