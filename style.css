@@ -142,6 +142,7 @@ body {
     text-align: center;
     font-family: 'Arial Black';
     border-bottom: .6rem double #ffffff;
+    height: 2rem;
 }
 .cs-tr-dark .cs-table-cell {
     background-color: #e0e0d6;
@@ -227,7 +228,7 @@ body {
     height: 6.9rem;
     z-index: 2;
 }
-.exhaustion-check {
+.input-box {
     background-color: #ffffff;
     border: .15rem solid #72715b;
     margin-left: .65rem !important;
@@ -312,4 +313,60 @@ body {
 }
 .cs-table-cell {
     height: 2rem;
+}
+#character-creature-type-label {
+    padding-top: 0.25rem;
+}
+#character-languages-label {
+    padding-top: 0.25rem;
+}
+.weapon-caption, .equipment-caption {
+    padding-top: .4rem;
+    font-size: .6rem;
+    font-family: 'Arial Black';
+    line-height: .6rem;
+}
+.weapon-caption-short {
+    padding-top: .2rem;
+    max-width: 28%;
+}
+.weapon-caption-long {
+    padding-top: .4rem;
+    width: 31%;
+}
+.storage-icons {
+    background-color: aquamarine;
+}
+.storage-bin {
+    background-color: red;
+    border: solid thin black;
+    color: #000000;
+}
+#equipment-slots-input {
+    color: #000000;
+    right: -0.35rem;
+    top: -0.6rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin: 0rem 0rem 0rem 0rem !important;
+    padding: 0rem 0rem 0rem 0rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#equipment-heading {
+    display: flex;
+    align-items: left;
+}
+.equipment-row-label {
+    font-size: .6rem;
+    display: flex;
+    align-items:flex-start;
+    padding: 0rem 0rem 0rem .25rem;
+}
+.equipment-row-label-dark {
+    color: #ffffff;
+}
+.equipment-row-label-light {
+    color: #bbbaa7;
 }
