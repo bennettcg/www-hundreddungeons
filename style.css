@@ -185,6 +185,8 @@ body {
     text-align: center;
     color: #000000;
     font-size: .7rem;
+    font-family: 'Arial';
+    font-weight: 600;
 }
 .attribute-icon {
     bottom:11%;
@@ -390,7 +392,7 @@ body {
     position: relative;
     z-index:1
 }
-#combat-hp-summary {
+#combat-hp-summary, #combat-speed {
     border: solid .4rem #72715b; 
     border-radius: .7rem;
     z-index: 8;
@@ -400,6 +402,15 @@ body {
     left: 1.8rem;
     height: 5.5rem;
     background-color: #ffffff;
+}
+#defense-initiative {
+    width: 85%;
+    z-index: 8;
+    top: 0.8rem;
+    left: 1.8rem;
+    height: 5.5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 #hit-dice-summary {
     z-index: 8;
@@ -435,4 +446,41 @@ body {
 }
 #hit-dice-lr {
     left: 1.3rem;
+}
+#initiative-label {
+    line-height: .8rem;
+}
+#combat-speed {
+    height: 2.8rem;
+}
+#combat-initiative {
+    background-color: #ffffff;
+    border: solid .4rem #72715b;
+    border-radius: .7rem;
+}
+#combat-defense-clip {
+    background-color: #ffffff;
+    clip-path: url(#shield-clip);
+    height: 100%;
+    left: 0.3rem;
+}
+#combat-defense {
+    height: 100%;
+    top: -5.5rem;
+}
+#combat-defense svg path { 
+    stroke: #72715b;
+    stroke-width: .4rem;
+}
+#defense-shield-clip {
+    height: 100%;
+    z-index: 7;
+}
+#defense-shield {
+    height: 100%;
+    z-index:8;
+}
+#defense-label {
+    height: 2rem;
+    z-index:2;
 }

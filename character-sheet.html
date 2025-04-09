@@ -411,7 +411,6 @@
                                         Q 20,80 40,70
                                         Q 20,60 20,60
                                         z"></path>
-
                                     </svg>
                                 </div>
                                 <div class="row position-relative" id="combat-hp-summary">
@@ -466,9 +465,9 @@
                                     </div>
                                     <div class="position-relative px-0 col-7" id="hit-dice-box">
                                         <div class="w-100 position-absolute" id="hit-dice-counts">
-                                            <span>___</span>
+                                            <span class="hit-dice-input" id="hit-dice-number">___</span>
                                             D
-                                            <span>___</span>
+                                            <span class="hit-dice-input" id="hit-dice-type">___</span>
                                         </div>
                                         <div class="w-100 position-absolute attribute-label hp-summary-label"
                                             id="hit-dice-label">
@@ -488,10 +487,40 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row position-relative">
-                                    DEFENSE/INITIATIVE
+                                <div class="row position-relative" id="defense-initiative">
+                                    <div class="col position-relative px-0 me-1" id="defense-wrapper">
+                                        <div class="position-relative px-0 me-1" id="combat-defense-clip">
+                                            <svg class="position-absolute" id="defense-shield-clip" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                                <clipPath id="shield-clip" clipPathUnits="userSpaceOnUse">
+                                                    <path d="M 0,0
+                                                  C 8,20 -20,85 46,86
+                                                  C 84,70 76,12 86,0 z" />
+                                                </clipPath>
+                                              </svg>
+                                            <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
+                                              <path fill="transparent"
+                                                  d="M 5,3
+                                                  C 13,20 -20,85 50,97
+                                                  C 120,80 85,15 90,3 z"  />
+                                            </svg>
+                                            <div class="w-100 position-absolute attribute-label hp-summary-label" id="defense-label">DEFENSE</div>
+                                        </div>
+                                        <div class="position-relative px-0 me-1" id="combat-defense">
+                                            <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
+                                              <path fill="transparent"
+                                                  d="M 5,3
+                                                  C 13,20 -20,85 50,97
+                                                  C 120,80 85,15 90,3 z"  />
+                                            </svg>
+                                        </div>
+                                    </div>    
+                                    <div class="col position-relative px-0 ms-1" id="combat-initiative">
+                                        <div class="" id="combat-initiative-box">
+                                            <div class="w-100 position-absolute attribute-label hp-summary-label" id="initiative-label">COMBAT INITIATIVE</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row position-relative">
+                                <div class="row position-relative" id="combat-speed">
                                     SPEED
                                 </div>
                             </div>
