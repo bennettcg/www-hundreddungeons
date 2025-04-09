@@ -381,7 +381,10 @@ body {
 .equipment-row-label-light {
     color: #bbbaa7;
 }
-#exploits, #storage {
+#exploits {
+    margin-top: 0.4rem;
+}
+#storage {
     margin-top: 2rem;
 }
 #combat-label {
@@ -392,21 +395,33 @@ body {
     position: relative;
     z-index:1
 }
-#combat-hp-summary, #combat-speed {
+#combat-hp-summary {
     border: solid .4rem #72715b; 
     border-radius: .7rem;
     z-index: 8;
     color: #000000;
     width: 85%;
-    top: 0.8rem;
+    top: 0.5rem;
     left: 1.8rem;
-    height: 5.5rem;
+    height: 5rem;
     background-color: #ffffff;
+}
+#combat-speed {
+    border: solid .4rem #72715b; 
+    border-radius: .7rem;
+    z-index: 8;
+    color: #000000;
+    width: 85%;
+    top: -0.2rem;
+    left: 0rem;
+    height: 3.3rem;
+    background-color: #ffffff;
+    text-align: center;
 }
 #defense-initiative {
     width: 85%;
     z-index: 8;
-    top: 0.8rem;
+    top: 0.1rem;
     left: 1.8rem;
     height: 5.5rem;
     margin-top: .5rem;
@@ -416,7 +431,7 @@ body {
     z-index: 8;
     color: #000000;
     width: 75%;
-    top: 0.8rem;
+    top: 0.3rem;
     left: 2.8rem;
 }
 .hp-summary-label {
@@ -435,7 +450,7 @@ body {
     z-index: 8;
     width: 75%;
     left: 2rem;
-    top: .8rem;
+    top: .4rem;
 }
 #character-exhaustion input {
     margin-left: .65rem;
@@ -449,9 +464,6 @@ body {
 }
 #initiative-label {
     line-height: .8rem;
-}
-#combat-speed {
-    height: 2.8rem;
 }
 #combat-initiative {
     background-color: #ffffff;

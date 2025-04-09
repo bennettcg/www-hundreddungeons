@@ -394,7 +394,7 @@
                         <div class="row position-relative">
                             <div class="col-4 position-relative px-0" id="combat-stats">
                                 <div class="position-absolute h-100 w-100 combat-summary-background">
-                                    <svg viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"
+                                    <svg viewBox="0 0 100 165" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <path fill="#bbbaa7" d="m 20,5 
                                         Q 50,-5 80,5
@@ -402,11 +402,11 @@
                                         Q 60,70 60,70
                                         Q 60,70 80,80
                                         Q 80,70 80,135
-                                        Q 80,145 70,142
-                                        Q 57,140 52.5,145
-                                        L 47.5, 145
+                                        Q 80,150 70,142
+                                        Q 57,140 52.5,150
+                                        L 47.5, 150
                                         Q 43,140 27.5,142
-                                        Q 20,145 20,135
+                                        Q 20,150 20,135
                                         Q 20,80 20,80
                                         Q 20,80 40,70
                                         Q 20,60 20,60
@@ -497,12 +497,6 @@
                                                   C 84,70 76,12 86,0 z" />
                                                 </clipPath>
                                               </svg>
-                                            <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
-                                              <path fill="transparent"
-                                                  d="M 5,3
-                                                  C 13,20 -20,85 50,97
-                                                  C 120,80 85,15 90,3 z"  />
-                                            </svg>
                                             <div class="w-100 position-absolute attribute-label hp-summary-label" id="defense-label">DEFENSE</div>
                                         </div>
                                         <div class="position-relative px-0 me-1" id="combat-defense">
@@ -510,7 +504,7 @@
                                               <path fill="transparent"
                                                   d="M 5,3
                                                   C 13,20 -20,85 50,97
-                                                  C 120,80 85,15 90,3 z"  />
+                                                  C 120,80 87,20 95,3 z"  />
                                             </svg>
                                         </div>
                                     </div>    
@@ -520,8 +514,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row position-relative" id="combat-speed">
-                                    SPEED
+                                <div class="container position-relative" id="combat-speed">
+                                    <div class="row position-relative" id="combat-speed-input-area">
+                                        <div class="col" id="combat-speed-input">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="row position-relative" id="combat-speed-label-area">
+                                        <div class="col cs-field-label attribute-label" id="combat-speed-label">SPEED</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-8">
@@ -1024,12 +1025,30 @@
                         </div>
                         <div class="row" id="storage-icons">
                             <div class="col storage-bin" id="storage-gold">
+                                <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
+                                    <path fill="transparent"
+                                        d="M 5,3
+                                        C 13,20 -20,85 50,97
+                                        C 120,80 87,20 95,3 z"  />
+                                  </svg>
                                 GOLD
                             </div>
                             <div class="col storage-bin" id="storage-trade-goods">
+                                <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
+                                    <path fill="transparent"
+                                        d="M 5,3
+                                        C 13,20 -20,85 50,97
+                                        C 120,80 87,20 95,3 z"  />
+                                  </svg>
                                 TRADE GOODS (SILVER)
                             </div>
                             <div class="col storage-bin" id="storage-materials">
+                                <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
+                                    <path fill="transparent"
+                                        d="M 5,3
+                                        C 13,20 -20,85 50,97
+                                        C 120,80 87,20 95,3 z"  />
+                                  </svg>
                                 MATERIALS &amp; SUNDRY
                             </div>
                         </div>
