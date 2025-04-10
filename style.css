@@ -346,13 +346,7 @@ body {
     width: 31%;
 }
 #storage-icons {
-    background-color: aquamarine;
     height: 8rem;
-}
-.storage-bin {
-    background-color: red;
-    border: solid thin black;
-    color: #000000;
 }
 #equipment-slots-input {
     color: #000000;
@@ -530,10 +524,10 @@ body {
     clip-path: url(#gold-clippath);
 }
 #storage-silver-clipped {
-    clip-path: url(#gold-clippath);
+    clip-path: url(#silver-clippath);
 }
 #storage-materials-clipped {
-    clip-path: url(#gold-clippath);
+    clip-path: url(#materials-clippath);
 }
 #silver-label {
     width: 8rem;
