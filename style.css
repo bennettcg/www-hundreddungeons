@@ -4,3 +4,534 @@ html, body {
 body {
     background: radial-gradient(#271d30, #0d0a10, #000000);
 }
+#sheet-container {
+    background: #ffffff;
+    color: #72715b;
+    font-family: "Arial Black";
+}
+.sheet-header {
+    text-align: center;
+}
+.input-wrapper {
+    border: .2rem solid #72715b;
+}
+.input-field {
+    background-color: #ffffff;
+}
+.input-label {
+    background-color: #e0e0d6;
+    font-size: .6em;
+}
+.cs-field-input {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: .7rem;
+}
+.cs-field-label {
+    background-color: #e0e0d6;
+    font-size: .7rem;
+    color: #000000;
+}
+.hexagon {
+    --b: .5rem;
+    height: 100%;
+    aspect-ratio: cos(30deg);
+    clip-path: 
+      polygon(50% 0,-50% 50%,50% 100%,150% 50%,50% 0,
+      50% var(--b),
+      calc(100% - var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+      calc(100% - var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+      50% calc(100% - var(--b)),
+      calc(var(--b)*sin(60deg)) calc(75% - var(--b)*cos(60deg)),
+      calc(var(--b)*sin(60deg)) calc(25% + var(--b)*cos(60deg)),
+      50% var(--b));
+      background: #72715b;
+      z-index: 4;
+}
+.hexagon-inner {
+    --b: .5rem;
+    height: 100%;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+      background: #ffffff;
+      z-index: 2;
+}
+.hexagon-outer {
+    --b: .5rem;
+    height: 100%;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+    background: #bbbaa7;
+    z-index: 1;
+}
+.pentagon {
+    --b: .5rem;
+    height: 100%;
+    aspect-ratio: cos(30deg);
+    clip-path: 
+    polygon(5% 60%, 95% 60%, 95% 72%, 50% 95%, 5% 72%);
+    z-index: 2;
+    background: #e0e0d6
+}
+.renown-pentagon-dark {
+    height: 8rem;
+    bottom: -3.9rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 70% 81%, 30% 81%);
+    z-index: 5;
+    background: #72715b;
+    left: 0rem;
+}
+.renown-pentagon-white {
+    height: 5.8rem;
+    bottom: -2.7rem;
+    left: 1.1rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 80% 70%, 20% 70%);
+    z-index: 7;
+    background: #ffffff;
+}
+.renown-pentagon-light {
+    height: 7rem;
+    bottom: -3.4rem;
+    left: 0.5rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 70% 80%, 30% 80%);
+    z-index: 6;
+    background: #e0e0d6;
+}
+.renown-pentagon-white {
+    height: 5.8rem;
+    bottom: -2.7rem;
+    left: 1.1rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 80% 70%, 20% 70%);
+    z-index: 7;
+    background: #ffffff;
+}
+.inspiration-rhombus-dark {
+    height: 7rem;
+    bottom: -1.9rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 50% 100%);
+    z-index: 5;
+    background: #72715b;
+    left: -2rem;
+}
+.inspiration-rhombus-light {
+    height: 6rem;
+    bottom: -1.4rem;
+    left: -1.5rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 50% 100%);
+    z-index: 6;
+    background: #e0e0d6;
+}
+.inspiration-pentagon-white {
+    height: 4.8rem;
+    bottom: -0.7rem;
+    left: -0.9rem;
+    aspect-ratio: 1;
+    clip-path: polygon(0 50%, 50% 0%, 100% 50%, 72% 80%, 28% 80%);
+    z-index: 7;
+    background: #ffffff;
+}
+.cs-table-caption {
+    background-color: #72715b;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Arial Black';
+    border-bottom: .6rem double #ffffff;
+    height: 2rem;
+}
+.cs-tr-dark .cs-table-cell {
+    background-color: #e0e0d6;
+    color: #000000;
+}
+.cs-tr-light .cs-table-cell {
+    background-color:#ffffff;
+    color: #000000;
+}
+#sheet-title {
+    font-size: 1.25em;
+    color: #72715b;
+    box-shadow:
+       inset 4.25em 0 0 0 #ffffff,
+       inset -4.25em 0 0 0 #ffffff,
+       inset 0 -.1em 0 0 #bbbaa7;
+}
+#sheet-subtitle {
+    font-size: .6em;
+    color: #bbbaa7;
+}
+#cs-upper-left {
+    color: #000000;
+    font-family: 'Arial';
+    font-weight: 600;
+}
+#cs-upper-right {
+    color: #000000;
+    font-family: 'Arial';
+    font-weight: 600;
+}
+#character-attributes-hexes {
+    margin: .75rem 0 .85rem 0;
+    height: 8.7rem;
+}
+.attribute-label {
+    bottom: 29%;
+    z-index: 3;
+    width: 84.5%;
+    text-align: center;
+    color: #000000;
+    font-size: .7rem;
+    font-family: 'Arial';
+    font-weight: 600;
+}
+.attribute-icon {
+    bottom:11%;
+    z-index: 4;
+    width: 84.5%;
+    text-align: center;
+}
+.attribute-icon img {
+    max-height: 1.6rem;
+    max-width: 2rem;
+}
+#row-attribute-hexes {
+    background-color: #bbbaa7;
+    border: .5rem solid #bbbaa7;
+    border-radius: .6rem;
+    clip-path: polygon(0% 0%,
+                       13% 0%,
+                       16.7% 17%,
+                       20.7% 0%,
+                       29.5% 0%,
+                       33.4% 17%,
+                       37.3% 0%,
+                       46% 0%,
+                       50% 17%,
+                       54% 0%,
+                       62.7% 0%,
+                       66.6% 17%,
+                       70.7% 0%, 
+                       79.5% 0%, 
+                       83.3% 17%,
+                       87.3% 0%,
+                       100% 0%,
+                       100% 100%,
+                       87.3% 100%,
+                       83.3% 83%,
+                       79.5% 100%,
+                       70.7% 100%,
+                       66.6% 83%,
+                       62.7% 100%,
+                       54% 100%,
+                       49.8% 83%,
+                       46% 100%,
+                       37.3% 100%,
+                       33.4% 83%,
+                       29.5% 100%, 
+                       20.7% 100%, 
+                       16.7% 83%,
+                       13% 100%,
+                       0% 100%);
+    bottom: .9rem;
+    height: 6.9rem;
+    z-index: 2;
+}
+.input-box {
+    background-color: #ffffff;
+    border: .15rem solid #72715b;
+}
+.check-label-above {
+    color: #bbbaa7;
+    text-align: center;
+    font-size: .7rem;
+}
+.check-label-below {
+    color: #72715b;
+    text-align: center;
+    font-size: .7rem;
+}
+#exhaustion-breadcrumb {
+    background-color: #bbbaa7;
+    height: .3rem;
+    top: 1.65rem;
+    width: 89%;
+    margin: 0 auto 0 3rem;
+}
+.sidebar-label {
+    transform: rotate(-90deg);
+    font-size: .6rem;
+    color: #bbbaa7;
+    left: -1.6rem;
+    top: 2.7rem;
+    font-family: 'Arial Black';
+}
+#abilities-label {
+    color: #ffffff;
+    z-index: 6;
+    left: -4.1rem;
+    top: 3.1rem;
+}
+#character-trained-label {
+    color: #000000;
+    font-size: .4rem;
+}
+#character-trained-check {
+    margin-left: .4rem !important;
+}
+#cs-skills-caption-wrapper {
+    text-align: left;
+    padding-left: 3.9rem;
+    margin-bottom: .1rem;
+}
+#cs-skills-caption {
+    left: 2rem;
+}
+#renown-label {
+    color: #000000;
+    z-index: 7;
+    top: 4.05rem;
+    left: 2.6rem;
+    font-size: .6rem;
+}
+#renown-bonus-label {
+    color: #000000;
+    z-index: 7;
+    top: 1.7rem;
+    left: 1.6rem;
+    font-size: 1.5rem;
+    font-family: 'Arial';
+    font-weight: 400;
+}
+#inspiration-label {
+    color: #000000;
+    z-index: 7;
+    top: 2.8rem;
+    left: .9rem;
+    font-size: .6rem;
+}
+.type-language {
+    height: 1.5rem;
+}
+#character-creature-type-input {
+    left: 7.3rem;
+}
+#character-languages-input {
+    left: 6rem;
+}
+.cs-table-cell {
+    height: 2rem;
+}
+#character-creature-type-label {
+    padding-top: 0.25rem;
+}
+#character-languages-label {
+    padding-top: 0.25rem;
+}
+.weapon-caption, .equipment-caption {
+    padding-top: .4rem;
+    font-size: .6rem;
+    font-family: 'Arial Black';
+    line-height: .6rem;
+}
+.weapon-caption-short {
+    padding-top: .2rem;
+    max-width: 28%;
+}
+.weapon-caption-long {
+    padding-top: .4rem;
+    width: 31%;
+}
+#storage-icons {
+    height: 8rem;
+}
+#equipment-slots-input {
+    color: #000000;
+    right: -0.35rem;
+    top: -0.4rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin: 0rem 0rem 0rem 0rem !important;
+    padding: 0rem 0rem 0rem 0rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#equipment-heading {
+    display: flex;
+    align-items: left;
+}
+.equipment-row-label {
+    font-size: .6rem;
+    display: flex;
+    align-items:flex-start;
+    padding: 0rem 0rem 0rem .25rem;
+}
+.equipment-row-label-dark {
+    color: #ffffff;
+}
+.equipment-row-label-light {
+    color: #bbbaa7;
+}
+#exploits {
+    margin-top: 0.4rem;
+    margin-bottom: 3rem;
+}
+#storage {
+    margin-top: 2rem;
+}
+#combat-label {
+    top: 50%;
+    left: -0.7rem;
+}
+.combat-summary-background {
+    position: relative;
+    z-index:1
+}
+#combat-hp-summary {
+    border: solid .4rem #72715b; 
+    border-radius: .7rem;
+    z-index: 8;
+    color: #000000;
+    width: 85%;
+    top: 0.5rem;
+    left: 1.8rem;
+    height: 5rem;
+    background-color: #ffffff;
+}
+#combat-speed {
+    border: solid .4rem #72715b; 
+    border-radius: .7rem;
+    z-index: 8;
+    color: #000000;
+    width: 85%;
+    top: -0.2rem;
+    left: 0rem;
+    height: 3.3rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+#defense-initiative {
+    width: 85%;
+    z-index: 8;
+    top: 0.1rem;
+    left: 1.8rem;
+    height: 5.5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+#hit-dice-summary {
+    z-index: 8;
+    color: #000000;
+    width: 75%;
+    top: 0.3rem;
+    left: 2.8rem;
+}
+.hp-summary-label {
+    bottom: 0;
+    background-color: #e0e0d6;
+}
+#hp-max-box {
+    border-right: solid .4rem #72715b;
+}
+#hit-dice-box {
+    border: solid .4rem #72715b;
+    border-radius: .7rem;
+    width: 62%;
+}
+#hit-dice-uses {
+    z-index: 8;
+    width: 75%;
+    left: 2rem;
+    top: .4rem;
+}
+#character-exhaustion input {
+    margin-left: .65rem;
+}
+#hit-dice-counts {
+    background-color: #ffffff;
+    text-align: center;
+}
+#hit-dice-lr {
+    left: 1.3rem;
+}
+#initiative-label {
+    line-height: .8rem;
+}
+#combat-initiative {
+    background-color: #ffffff;
+    border: solid .4rem #72715b;
+    border-radius: .7rem;
+}
+#combat-defense-clip {
+    background-color: #ffffff;
+    clip-path: url(#shield-clip);
+    height: 100%;
+    left: 0.3rem;
+}
+#combat-defense {
+    height: 100%;
+    top: -5.5rem;
+}
+#combat-defense svg path { 
+    stroke: #72715b;
+    stroke-width: .4rem;
+}
+#defense-shield-clip {
+    height: 100%;
+    z-index: 7;
+}
+#defense-shield {
+    height: 100%;
+    z-index:8;
+}
+#defense-label {
+    height: 2rem;
+    z-index:2;
+}
+#gold-container, #silver-container, #materials-container {
+    z-index: 12;
+    height: 100%;
+    width: 100%;
+}
+#gold-drawing, #silver-drawing, #materials-drawing {
+    fill: transparent;
+    stroke: #72715b;
+    stroke-width: .4rem;
+    height: 100%;
+    width: 100%;
+}
+#storage-gold-label, #storage-materials-label {
+    height: 2rem;
+    z-index:2;
+}
+#storage-silver-label {
+    height: 2rem;
+    z-index:2;
+    width: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.storage-clipped {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+#storage-gold-clipped {
+    clip-path: url(#gold-clippath);
+}
+#storage-silver-clipped {
+    clip-path: url(#silver-clippath);
+}
+#storage-materials-clipped {
+    clip-path: url(#materials-clippath);
+}
+#silver-label {
+    width: 8rem;
+    text-align: center;
+    margin: 0 19.5% 0 19.5%;
+    line-height: 0.7rem;
+}

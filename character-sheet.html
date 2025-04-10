@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hundred Dungeons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <div class="container" id="sheet-container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col">
+                    <div class="row sheet-header">
+                        <div id="sheet-title">HUNDRED DUNGEONS</div>
+                        <div id="sheet-subtitle">CHARACTER SHEET</div>
+                    </div>
+                </div>
+                <div class="col-7"></div>
+            </div>
+            <div class="row">
+
+                <div class="col-8" id="cs-upper-left">
+                    <div class="container input-wrapper my-2" id="character-name-class-level-container">
+                        <div class="row row-cols-2" id="character-name-class-input">
+                            <div class="col-7" id="character-name-input">
+                                &nbsp;
+                            </div>
+                            <div class="col-5" id="character-class-level-input">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <div class="row row-cols-2" id="character-name-class-label">
+                            <div class="col-7 cs-field-label" id="character-name-label">CHARACTER NAME</div>
+                            <div class="col-5 cs-field-label" id="character-class-level-label">CLASS & LEVEL</div>
+                        </div>
+                    </div>
+
+                    <div class="container my-2" id="character-type-langauges">
+                        <div class="row ">
+                            <div class="col-4 input-wrapper me-2">
+                                <div class="row type-language position-relative">
+                                    <div class="col-5 cs-field-label pe-0 h-100 position-absolute type-language-label"
+                                        id="character-creature-type-label">CREATURE TYPE</div>
+                                    <div class="col cs-field-input h-100 position-absolute w-50"
+                                        id="character-creature-type-input">&nbsp;</div>
+                                </div>
+                            </div>
+                            <div class="col input-wrapper">
+                                <div class="row type-language position-relative">
+                                    <div class="col-2 cs-field-label pe-0 position-absolute h-100 type-language-label"
+                                        id="character-languages-label">LANGUAGES</div>
+                                    <div class="col cs-field-input position-absolute h-100 w-75"
+                                        id="character-languages-input">&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container" id="character-attributes-hexes">
+                        <div class="row row-cols-6 h-100 position-relative">
+                            <div class="position-absolute sidebar-label" id="abilities-label">ABILITY SCORES</div>
+                            <div class="w-100 position-absolute" id="row-attribute-hexes"></div>
+                            <div class="position-relative col h-100" id="attribute-hex-strength">
+                                <div class="hexagon position-absolute"></div>
+                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="pentagon position-absolute"></div>
+                                <div class="position-absolute attribute-label">STRENGTH</div>
+                                <div class="position-absolute attribute-icon"><img src="images/icons/Str_Icon.png"
+                                        alt="A heavily-muscled arm, flexing" /></div>
+                            </div>
+                            <div class="position-relative col h-100" id="attribute-hex-dexterity">
+                                <div class="hexagon position-absolute"></div>
+                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="pentagon position-absolute"></div>
+                                <div class="position-absolute attribute-label">DEXTERITY</div>
+                                <div class="position-absolute attribute-icon"><img src="images/icons/Dex_Icon.png"
+                                        alt="A booted foot sprining right-ward" /></div>
+                            </div>
+                            <div class="position-relative col h-100" id="attribute-hex-constitution">
+                                <div class="hexagon position-absolute"></div>
+                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="pentagon position-absolute"></div>
+                                <div class="position-absolute attribute-label">CONSTITUTION</div>
+                                <div class="position-absolute attribute-icon"><img src="images/icons/Con_Icon.png"
+                                        alt="A solid kettlebell" /></div>
+                            </div>
+                            <div class="position-relative col h-100" id="attribute-hex-intelligence">
+                                <div class="hexagon position-absolute"></div>
+                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="pentagon position-absolute"></div>
+                                <div class="position-absolute attribute-label">INTELLIGENCE</div>
+                                <div class="position-absolute attribute-icon"><img src="images/icons/Int_Icon.png"
+                                        alt="A bulb-shaped figure similar to simplified human head" /></div>
+                            </div>
+                            <div class="position-relative col h-100" id="attribute-hex-wisdom">
+                                <div class="hexagon position-absolute"></div>
+                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="pentagon position-absolute"></div>
+                                <div class="position-absolute attribute-label">WISDOM</div>
+                                <div class="position-absolute attribute-icon"><img src="images/icons/Wis_Icon.png"
+                                        alt="An open eye and pupil" /></div>
+                            </div>
+                            <div class="position-relative col h-100" id="attribute-hex-charisma">
+                                <div class="hexagon position-absolute"></div>
+                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="pentagon position-absolute"></div>
+                                <div class="position-absolute attribute-label">CHARISMA</div>
+                                <div class="position-absolute attribute-icon"><img src="images/icons/Cha_Icon.png"
+                                        alt="Two hands grasping in a handshake" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container my-2" id="character-traits">
+                        <div class="row cs-table-caption">
+                            <div class="col" id="cs-traits-caption">
+                                TRAITS
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-trait-l1">&nbsp;</div>
+                            </div>
+                            <div class="col ps-1 pe-0">
+                                <div class="cs-table-cell" id="character-trait-r1">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-trait-l2">&nbsp;</div>
+                            </div>
+                            <div class="col ps-1 pe-0">
+                                <div class="cs-table-cell" id="character-trait-r2">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-trait-l3">&nbsp;</div>
+                            </div>
+                            <div class="col ps-1 pe-0">
+                                <div class="cs-table-cell" id="character-trait-r3">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-trait-l4">&nbsp;</div>
+                            </div>
+                            <div class="col ps-1 pe-0">
+                                <div class="cs-table-cell" id="character-trait-r4">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container my-2" id="character-exhaustion">
+                        <div class="row position-relative">
+                            <div class="position-absolute" id="exhaustion-breadcrumb"></div>
+                            <div class="position-relative">
+                                <div class="position-absolute sidebar-label" id="exhaustion-label">EXHAUSTION</div>
+                            </div>
+
+                            <div class="position-relative col">
+                                <div class="check-label-above w-100">
+                                    <label class="form-check-label" for="character-exhaustion-1">1</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-box" type="checkbox"
+                                        id="character-exhaustion-1" value="1">
+                                </div>
+                                <div class="check-label-below w-100">
+                                    <label class="form-check-label" for="character-exhaustion-1">CAN'T TAKE
+                                        REACTIONS</label>
+                                </div>
+                            </div>
+                            <div class="position-relative col">
+                                <div class="check-label-above w-100">
+                                    <label class="form-check-label" for="character-exhaustion-2">2</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-box" type="checkbox"
+                                        id="character-exhaustion-2" value="2">
+                                </div>
+                                <div class="check-label-below w-100">
+                                    <label class="form-check-label" for="character-exhaustion-2">1 ACTION OR QUICK
+                                        ACTION PER TURN</label>
+                                </div>
+                            </div>
+                            <div class="position-relative col">
+                                <div class="check-label-above w-100">
+                                    <label class="form-check-label" for="character-exhaustion-3">3</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-box" type="checkbox"
+                                        id="character-exhaustion-3" value="3">
+                                </div>
+                                <div class="check-label-below w-100">
+                                    <label class="form-check-label" for="character-exhaustion-3">YOU CAN'T USE
+                                        SKILLS</label>
+                                </div>
+                            </div>
+                            <div class="position-relative col">
+                                <div class="check-label-above w-100">
+                                    <label class="form-check-label" for="character-exhaustion-4">4</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-box" type="checkbox"
+                                        id="character-exhaustion-4" value="4">
+                                </div>
+                                <div class="check-label-below w-100">
+                                    <label class="form-check-label" for="character-exhaustion-4">STR, DEX, CON ARE
+                                        WEAK</label>
+                                </div>
+                            </div>
+                            <div class="position-relative col">
+                                <div class="check-label-above w-100">
+                                    <label class="form-check-label" for="character-exhaustion-5">5</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-box" type="checkbox"
+                                        id="character-exhaustion-5" value="5">
+                                </div>
+                                <div class="check-label-below w-100">
+                                    <label class="form-check-label" for="character-exhaustion-6">INT, WIS, CHA ARE
+                                        WEAK</label>
+                                </div>
+                            </div>
+                            <div class="position-relative col">
+                                <div class="check-label-above w-100">
+                                    <label class="form-check-label" for="character-exhaustion-6">6</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-box" type="checkbox"
+                                        id="character-exhaustion-6" value="6">
+                                </div>
+                                <div class="check-label-below w-100">
+                                    <label class="form-check-label" for="character-exhaustion-6">SLOWED</label>
+                                </div>
+                            </div>
+                            <div class="position-relative col">
+                                <div class="check-label-above w-100">
+                                    <label class="form-check-label" for="character-exhaustion-7">7</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-box" type="checkbox"
+                                        id="character-exhaustion-7" value="7">
+                                </div>
+                                <div class="check-label-below w-100">
+                                    <label class="form-check-label" for="character-exhaustion-7">STUNNED</label>
+                                </div>
+                            </div>
+                            <div class="position-relative col">
+                                <div class="check-label-above w-100">
+                                    <label class="form-check-label" for="character-exhaustion-8">8</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-box" type="checkbox"
+                                        id="character-exhaustion-8" value="8">
+                                </div>
+                                <div class="check-label-below w-100">
+                                    <label class="form-check-label" for="character-exhaustion-8">DEAD</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4" id="cs-upper-right">
+                    <div class="container my-2 position-relative">
+                        <div class="row">
+                            <div class="col-4 input-wrapper px-0">
+                                <div class="row mx-0" id="character-experience-input">
+                                    <div class="col px-0" id="character-experience-current">
+
+                                    </div>
+                                    /
+                                    <div class="col px-0" id="character-experience-to-level">
+
+                                    </div>
+                                </div>
+                                <div class="row mx-0">
+                                    <div class="col-12 cs-field-label" id="character-experience-label">EXPERIENCE</div>
+                                </div>
+
+                            </div>
+                            <div class="col-1 px-1" id="trained-check-wrapper">
+                                <div class="check-label-above">
+                                    <label class="form-check-label" id="character-trained-label"
+                                        for="character-trained-check">TRAINED</label>
+                                </div>
+                                <div class="form-check p-0">
+                                    <input class="form-check-input input-box m-0" type="checkbox"
+                                        id="character-trained-check" value="1">
+                                </div>
+                            </div>
+                            <div class="col-4 position-relative">
+                                <div class="renown-pentagon-dark position-absolute"></div>
+                                <div class="renown-pentagon-light position-absolute"></div>
+                                <div class="renown-pentagon-white position-absolute"></div>
+                                <div class="position-absolute" id="renown-bonus-label">+</div>
+                                <div class="position-absolute" id="renown-label">RENOWN</div>
+                            </div>
+                            <div class="col-3 position-relative">
+                                <div class="inspiration-rhombus-dark position-absolute"></div>
+                                <div class="inspiration-rhombus-light position-absolute"></div>
+                                <div class="inspiration-pentagon-white position-absolute"></div>
+                                <div class="position-absolute" id="inspiration-label">INSP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container my-2">
+                        <div class="row cs-table-caption" id="cs-skills-caption-wrapper">
+                            <div class="col" id="cs-skills-caption">
+                                SKILLS
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-1">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-2">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-3">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-4">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-5">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-6">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-7">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-8">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-9">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-10">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-11">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-skill-12">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6" id="bottom-left">
+                    <div class="container position-relative" id="combat-weapons">
+                        <div class="position-absolute sidebar-label" id="combat-label">COMBAT</div>
+                        <div class="row position-relative">
+                            <div class="col-4 position-relative px-0" id="combat-stats">
+                                <div class="position-absolute h-100 w-100 combat-summary-background">
+                                    <svg viewBox="0 0 100 165" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path fill="#bbbaa7" d="m 20,5 
+                                        Q 50,-5 80,5
+                                        Q 80,50 80,60 
+                                        Q 60,70 60,70
+                                        Q 60,70 80,80
+                                        Q 80,70 80,135
+                                        Q 80,150 70,142
+                                        Q 57,140 52.5,150
+                                        L 47.5, 150
+                                        Q 43,140 27.5,142
+                                        Q 20,150 20,135
+                                        Q 20,80 20,80
+                                        Q 20,80 40,70
+                                        Q 20,60 20,60
+                                        z"></path>
+                                    </svg>
+                                </div>
+                                <div class="row position-relative" id="combat-hp-summary">
+                                    <div class="col px-0 position-relative" id="hp-max-box">
+                                        <div class="attribute-label hp-summary-label w-100 position-absolute"
+                                            id="hp-max-label">HP MAX</div>
+                                    </div>
+                                    <div class="col px-0 position-relative" id="hp-current-box">
+                                        <div class="attribute-label hp-summary-label w-100 position-absolute"
+                                            id="hp-current-label">CURRENT</div>
+                                    </div>
+                                </div>
+                                <div class="row position-relative gx-0" id="hit-dice-uses">
+                                    <div class="col form-check px-0">
+                                        <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-1"
+                                            value="1">
+                                    </div>
+                                    <div class="col form-check px-0">
+                                        <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-2"
+                                            value="2">
+                                    </div>
+                                    <div class="col form-check ps-0 pe-1">
+                                        <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-3"
+                                            value="3">
+                                    </div>
+
+                                    <div class="col form-check ps-1 pe-0">
+                                        <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-4"
+                                            value="4">
+                                    </div>
+                                    <div class="col form-check px-0">
+                                        <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-5"
+                                            value="5">
+                                    </div>
+                                    <div class="col form-check px-0">
+                                        <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-6"
+                                            value="6">
+                                    </div>
+                                </div>
+                                <div class="row position-relative gx-0" id="hit-dice-summary">
+                                    <div class="col-1 px-0 position-relative">
+                                        <div class="row">
+                                            <div class="col form-check px-0" id="hit-dice-ll">
+                                                <input class="form-check-input input-box mx-0" type="checkbox"
+                                                    id="hit-dice-7" value="7">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col form-check px-0">
+                                                <input class="form-check-input input-box mx-0" type="checkbox"
+                                                    id="hit-dice-8" value="8">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="position-relative px-0 col-7" id="hit-dice-box">
+                                        <div class="w-100 position-absolute" id="hit-dice-counts">
+                                            <span class="hit-dice-input" id="hit-dice-number">___</span>
+                                            D
+                                            <span class="hit-dice-input" id="hit-dice-type">___</span>
+                                        </div>
+                                        <div class="w-100 position-absolute attribute-label hp-summary-label"
+                                            id="hit-dice-label">
+                                            HIT DICE
+                                        </div>
+                                    </div>
+                                    <div class="col-1 px-0 position-relative" id="hit-dice-lr">
+                                        <div class="row">
+                                            <div class="col form-check px-0">
+                                                <input class="form-check-input input-box mx-0" type="checkbox"
+                                                    id="hit-dice-9" value="9">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col form-check px-0">
+                                                <input class="form-check-input input-box mx-0" type="checkbox"
+                                                    id="hit-dice-10" value="10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row position-relative" id="defense-initiative">
+                                    <div class="col position-relative px-0 me-1" id="defense-wrapper">
+                                        <div class="position-relative px-0 me-1" id="combat-defense-clip">
+                                            <svg class="position-absolute" id="defense-shield-clip"
+                                                viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                                <clipPath id="shield-clip" clipPathUnits="userSpaceOnUse">
+                                                    <path d="M 0,0
+                                                  C 8,20 -20,85 46,86
+                                                  C 84,70 76,12 86,0 z" />
+                                                </clipPath>
+                                            </svg>
+                                            <div class="w-100 position-absolute attribute-label hp-summary-label"
+                                                id="defense-label">DEFENSE</div>
+                                        </div>
+                                        <div class="position-relative px-0 me-1" id="combat-defense">
+                                            <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="transparent" d="M 5,3
+                                                  C 13,20 -20,85 50,97
+                                                  C 120,80 87,20 95,3 z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="col position-relative px-0 ms-1" id="combat-initiative">
+                                        <div class="" id="combat-initiative-box">
+                                            <div class="w-100 position-absolute attribute-label hp-summary-label"
+                                                id="initiative-label">COMBAT INITIATIVE</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container position-relative" id="combat-speed">
+                                    <div class="row position-relative" id="combat-speed-input-area">
+                                        <div class="col" id="combat-speed-input">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="row position-relative" id="combat-speed-label-area">
+                                        <div class="col cs-field-label attribute-label" id="combat-speed-label">SPEED
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="row cs-table-caption" id="cs-weapons-caption">
+                                    <div class="col weapon-caption weapon-caption-long">WEAPON OR SPELL</div>
+                                    <div class="col weapon-caption weapon-caption-short">ATTACK BONUS OR DIFFICULTY
+                                    </div>
+                                    <div class="col weapon-caption weapon-caption-long">DAMAGE/EFFECT</div>
+                                </div>
+                                <div class="row cs-tr-light">
+                                    <div class="col-5 ps-0 pe-1">
+                                        <div class="cs-table-cell" id="weapon-l1">&nbsp;</div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">
+                                        <div class="cs-table-cell" id="weapon-m1">&nbsp;</div>
+                                    </div>
+                                    <div class="col-5 ps-1 pe-0">
+                                        <div class="cs-table-cell" id="weapon-r1">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cs-tr-dark">
+                                    <div class="col-5 ps-0 pe-1">
+                                        <div class="cs-table-cell" id="weapon-l2">&nbsp;</div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">
+                                        <div class="cs-table-cell" id="weapon-m2">&nbsp;</div>
+                                    </div>
+                                    <div class="col-5 ps-1 pe-0">
+                                        <div class="cs-table-cell" id="weapon-r2">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cs-tr-light">
+                                    <div class="col-5 ps-0 pe-1">
+                                        <div class="cs-table-cell" id="weapon-l3">&nbsp;</div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">
+                                        <div class="cs-table-cell" id="weapon-m3">&nbsp;</div>
+                                    </div>
+                                    <div class="col-5 ps-1 pe-0">
+                                        <div class="cs-table-cell" id="weapon-r3">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cs-tr-dark">
+                                    <div class="col-5 ps-0 pe-1">
+                                        <div class="cs-table-cell" id="weapon-l4">&nbsp;</div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">
+                                        <div class="cs-table-cell" id="weapon-m4">&nbsp;</div>
+                                    </div>
+                                    <div class="col-5 ps-1 pe-0">
+                                        <div class="cs-table-cell" id="weapon-r4">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cs-tr-light">
+                                    <div class="col-5 ps-0 pe-1">
+                                        <div class="cs-table-cell" id="weapon-l5">&nbsp;</div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">
+                                        <div class="cs-table-cell" id="weapon-m5">&nbsp;</div>
+                                    </div>
+                                    <div class="col-5 ps-1 pe-0">
+                                        <div class="cs-table-cell" id="weapon-r5">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cs-tr-dark">
+                                    <div class="col-5 ps-0 pe-1">
+                                        <div class="cs-table-cell" id="weapon-l6">&nbsp;</div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">
+                                        <div class="cs-table-cell" id="weapon-m6">&nbsp;</div>
+                                    </div>
+                                    <div class="col-5 ps-1 pe-0">
+                                        <div class="cs-table-cell" id="weapon-r6">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cs-tr-light">
+                                    <div class="col-5 ps-0 pe-1">
+                                        <div class="cs-table-cell" id="weapon-l7">&nbsp;</div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">
+                                        <div class="cs-table-cell" id="weapon-m7">&nbsp;</div>
+                                    </div>
+                                    <div class="col-5 ps-1 pe-0">
+                                        <div class="cs-table-cell" id="weapon-r7">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="row cs-tr-dark">
+                                    <div class="col-5 ps-0 pe-1">
+                                        <div class="cs-table-cell" id="weapon-l8">&nbsp;</div>
+                                    </div>
+                                    <div class="col-2 ps-1 pe-1">
+                                        <div class="cs-table-cell" id="weapon-m8">&nbsp;</div>
+                                    </div>
+                                    <div class="col-5 ps-1 pe-0">
+                                        <div class="cs-table-cell" id="weapon-r8">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="container" id="exploits">
+                        <div class="row cs-table-caption">
+                            <div class="col" id="cs-exploits-caption">
+                                EXPLOITS
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-1">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-2">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-3">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-4">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-5">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-6">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-7">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-8">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-9">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-10">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-11">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-12">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-13">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-14">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-15">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-16">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6" id="bottom-right">
+                    <div class="container" id="equipment-container">
+                        <div class="row cs-table-caption" id="cs-equipment-caption">
+                            <div class="col-8 equipment-caption" id="equipment-heading">EQUIPMENT</div>
+                            <div class="col-2 equipment-caption">VALUE (S)</div>
+                            <div class="col-2 equipment-caption position-relative">
+                                SLOTS/
+                                <div class="form-check-input input-box position-absolute" id="equipment-slots-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l1">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        1
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m1">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r1">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l2">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        2
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m2">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r2">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l3">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        3
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m3">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r3">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l4">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        4
+                                        </spa>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m4">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r4">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l5">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        5
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m5">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r5">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l6">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        6
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m6">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r6">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l7">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        7
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m7">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r7">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l8">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        8
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m8">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r8">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l9">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        9
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m9">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r9">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l10">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        10
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m10">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r10">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l11">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        11
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m1">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r11">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l12">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        12
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m12">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r12">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l13">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        13
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m13">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r13">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l14">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        14
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m14">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r14">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l15">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        15
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m15">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r15">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l6">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        16
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m16">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r16">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l17">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        17
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m17">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r17">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l18">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        18
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m18">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r18">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l19">
+                                    <span class="equipment-row-label equipment-row-label-light">
+                                        19
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m19">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r19">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col-8 ps-0 pe-1">
+                                <div class="cs-table-cell" id="equipment-l20">
+                                    <span class="equipment-row-label equipment-row-label-dark">
+                                        20
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-2 ps-1 pe-1">
+                                <div class="cs-table-cell" id="equipment-m20">&nbsp;</div>
+                            </div>
+                            <div class="col-2 ps-1 pe-0">
+                                <div class="cs-table-cell" id="equipment-r20">&nbsp;</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="container" id="storage">
+                        <div class="row cs-table-caption">
+                            <div class="col" id="cs-storage-caption">
+                                STORAGE
+                            </div>
+                        </div>
+                        <div class="row" id="storage-icons">
+                            <div class="col-3 storage-bin position-relative px-0" id="storage-gold">
+                                <div class="storage-clipped position-absolute" id="storage-gold-clipped">
+                                    <svg class="position-absolute" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <clipPath id="gold-clippath" clipPathUnits="objectBoundingBox">
+                                            <path d="M .15,.20
+                                                       V .97
+                                                       H .85
+                                                      V .20
+                                                      Q .50,-.05 .15,.20 z" />
+                                        </clipPath>
+                                    </svg>
+                                    <div class="w-100 position-absolute attribute-label hp-summary-label"
+                                        id="storage-gold-label">GOLD</div>
+                                </div>
+                                <div class="storage position-absolute" id="gold-container">
+                                    <svg class="position-absolute" id="gold-drawing" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 5,20
+                                           V 97
+                                           H 95
+                                           V 20
+                                           Q 50,-5 5, 20 z" />
+                                        <path d="M 35,7
+                                             Q 50,37 65,7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-4 storage-bin position-relative px-0" id="storage-silver">
+                                <div class="storage-clipped position-absolute" id="storage-silver-clipped">
+                                    <svg class="position-absolute" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <clipPath id="silver-clippath" clipPathUnits="objectBoundingBox">
+                                            <path d="M 0.25,0.15
+                                            Q 0.33,0.20 0.3,0.35
+                                            Q 0.1,0.65 0.35,0.97
+                                            H 0.65
+                                            Q 0.9,0.65 0.7,0.35
+                                            Q 0.67,0.20 0.75,0.15
+                                            Q 0.50,0.04 0.25,0.15 z" />
+                                        </clipPath>
+                                    </svg>
+                                    <div class="w-100 position-absolute attribute-label hp-summary-label"id="storage-silver-label">
+                                        <div id="silver-label">TRADE GOODS (SILVER)</div>
+                                    </div>
+                                </div>
+                                <div class="storage position-absolute" id="silver-container">
+                                    <svg class="position-absolute" id="silver-drawing" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 5,15
+                                           Q 25,20 20,35
+                                           Q -20,65 25,97
+                                           H 75
+                                           Q 120,65 80,35
+                                           Q 75,20 95,15
+                                           Q 50,4  5,15 z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-5 storage-bin position-relative px-0" id="storage-materials">
+                                <div class="storage-clipped position-absolute" id="storage-materials-clipped">
+                                    <svg class="position-absolute" viewBox="0 0 150 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <clipPath id="materials-clippath" clipPathUnits="objectBoundingBox">
+                                            <path d="M 0.16, 0.15 
+                                                     V .97
+                                                     H .84
+                                                     V 0.15 z" />
+                                        </clipPath>
+                                    </svg>
+                                    <div class="w-100 position-absolute attribute-label hp-summary-label"id="storage-silver-label">MATERIALS &amp; SUNDRY</div>
+                                </div>
+                                <div class="storage position-absolute" id="silver-container">
+                                    <svg class="position-absolute" id="silver-drawing" viewBox="0 0 150 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 10, 12
+                                                 H 65
+                                                 V 10
+                                                 H 85
+                                                 V 12
+                                                 H 145
+                                                 V 97
+                                                 H 5
+                                                 V 12 z"/>
+                                        <path d="M 5, 23
+                                                 H 65
+                                                 V 33
+                                                 Q 75,40 85,33
+                                                 V 26
+                                                 H 145
+                                                 V 23
+                                                 H 85
+                                                 V 10
+                                                 H 65
+                                                 V 26
+                                                 H 5" />
+                                        <path d="M 75, 23
+                                                 V 30" />
+                                        <circle cx="75" cy="23" r="1"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
