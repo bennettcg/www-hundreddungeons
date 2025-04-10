@@ -345,8 +345,9 @@ body {
     padding-top: .4rem;
     width: 31%;
 }
-.storage-icons {
+#storage-icons {
     background-color: aquamarine;
+    height: 8rem;
 }
 .storage-bin {
     background-color: red;
@@ -383,6 +384,7 @@ body {
 }
 #exploits {
     margin-top: 0.4rem;
+    margin-bottom: 3rem;
 }
 #storage {
     margin-top: 2rem;
@@ -495,4 +497,47 @@ body {
 #defense-label {
     height: 2rem;
     z-index:2;
+}
+#gold-container, #silver-container, #materials-container {
+    z-index: 12;
+    height: 100%;
+    width: 100%;
+}
+#gold-drawing, #silver-drawing, #materials-drawing {
+    fill: transparent;
+    stroke: #72715b;
+    stroke-width: .4rem;
+    height: 100%;
+    width: 100%;
+}
+#storage-gold-label, #storage-materials-label {
+    height: 2rem;
+    z-index:2;
+}
+#storage-silver-label {
+    height: 2rem;
+    z-index:2;
+    width: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.storage-clipped {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+#storage-gold-clipped {
+    clip-path: url(#gold-clippath);
+}
+#storage-silver-clipped {
+    clip-path: url(#gold-clippath);
+}
+#storage-materials-clipped {
+    clip-path: url(#gold-clippath);
+}
+#silver-label {
+    width: 8rem;
+    text-align: center;
+    margin: 0 19.5% 0 19.5%;
+    line-height: 0.7rem;
 }

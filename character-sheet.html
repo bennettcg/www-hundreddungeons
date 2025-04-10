@@ -454,12 +454,14 @@
                                     <div class="col-1 px-0 position-relative">
                                         <div class="row">
                                             <div class="col form-check px-0" id="hit-dice-ll">
-                                                <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-6" value="6">
+                                                <input class="form-check-input input-box mx-0" type="checkbox"
+                                                    id="hit-dice-7" value="7">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col form-check px-0">
-                                                <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-6" value="6">
+                                                <input class="form-check-input input-box mx-0" type="checkbox"
+                                                    id="hit-dice-8" value="8">
                                             </div>
                                         </div>
                                     </div>
@@ -477,12 +479,14 @@
                                     <div class="col-1 px-0 position-relative" id="hit-dice-lr">
                                         <div class="row">
                                             <div class="col form-check px-0">
-                                                <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-6" value="6">
+                                                <input class="form-check-input input-box mx-0" type="checkbox"
+                                                    id="hit-dice-9" value="9">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col form-check px-0">
-                                                <input class="form-check-input input-box mx-0" type="checkbox" id="hit-dice-6" value="6">
+                                                <input class="form-check-input input-box mx-0" type="checkbox"
+                                                    id="hit-dice-10" value="10">
                                             </div>
                                         </div>
                                     </div>
@@ -490,27 +494,30 @@
                                 <div class="row position-relative" id="defense-initiative">
                                     <div class="col position-relative px-0 me-1" id="defense-wrapper">
                                         <div class="position-relative px-0 me-1" id="combat-defense-clip">
-                                            <svg class="position-absolute" id="defense-shield-clip" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="position-absolute" id="defense-shield-clip"
+                                                viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                                 <clipPath id="shield-clip" clipPathUnits="userSpaceOnUse">
                                                     <path d="M 0,0
                                                   C 8,20 -20,85 46,86
                                                   C 84,70 76,12 86,0 z" />
                                                 </clipPath>
-                                              </svg>
-                                            <div class="w-100 position-absolute attribute-label hp-summary-label" id="defense-label">DEFENSE</div>
+                                            </svg>
+                                            <div class="w-100 position-absolute attribute-label hp-summary-label"
+                                                id="defense-label">DEFENSE</div>
                                         </div>
                                         <div class="position-relative px-0 me-1" id="combat-defense">
-                                            <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
-                                              <path fill="transparent"
-                                                  d="M 5,3
+                                            <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="transparent" d="M 5,3
                                                   C 13,20 -20,85 50,97
-                                                  C 120,80 87,20 95,3 z"  />
+                                                  C 120,80 87,20 95,3 z" />
                                             </svg>
                                         </div>
-                                    </div>    
+                                    </div>
                                     <div class="col position-relative px-0 ms-1" id="combat-initiative">
                                         <div class="" id="combat-initiative-box">
-                                            <div class="w-100 position-absolute attribute-label hp-summary-label" id="initiative-label">COMBAT INITIATIVE</div>
+                                            <div class="w-100 position-absolute attribute-label hp-summary-label"
+                                                id="initiative-label">COMBAT INITIATIVE</div>
                                         </div>
                                     </div>
                                 </div>
@@ -521,7 +528,8 @@
                                         </div>
                                     </div>
                                     <div class="row position-relative" id="combat-speed-label-area">
-                                        <div class="col cs-field-label attribute-label" id="combat-speed-label">SPEED</div>
+                                        <div class="col cs-field-label attribute-label" id="combat-speed-label">SPEED
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -698,6 +706,16 @@
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
                                 <div class="cs-table-cell" id="character-exploit-14">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-light">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-15">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row cs-tr-dark">
+                            <div class="col ps-0 pe-1">
+                                <div class="cs-table-cell" id="character-exploit-16">&nbsp;</div>
                             </div>
                         </div>
                     </div>
@@ -1024,32 +1042,74 @@
                             </div>
                         </div>
                         <div class="row" id="storage-icons">
-                            <div class="col storage-bin" id="storage-gold">
-                                <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
-                                    <path fill="transparent"
-                                        d="M 5,3
-                                        C 13,20 -20,85 50,97
-                                        C 120,80 87,20 95,3 z"  />
-                                  </svg>
-                                GOLD
+                            <div class="col-3 storage-bin position-relative px-0" id="storage-gold">
+                                <div class="storage-clipped position-absolute" id="storage-gold-clipped">
+                                    <svg class="position-absolute" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <clipPath id="gold-clippath" clipPathUnits="objectBoundingBox">
+                                            <path d="M .15,.20
+                                                       V .97
+                                                       H .85
+                                                      V .20
+                                                      Q .50,-.05 .15,.20 z" />
+                                        </clipPath>
+                                    </svg>
+                                    <div class="w-100 position-absolute attribute-label hp-summary-label"
+                                        id="storage-gold-label">GOLD</div>
+                                </div>
+                                <div class="storage position-absolute" id="gold-container">
+                                    <svg class="position-absolute" id="gold-drawing" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 5,20
+                                           V 97
+                                           H 95
+                                           V 20
+                                           Q 50,-5 5, 20 z" />
+                                        <path d="M 35,7
+                                             Q 50,37 65,7"></path>
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="col storage-bin" id="storage-trade-goods">
-                                <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
-                                    <path fill="transparent"
-                                        d="M 5,3
-                                        C 13,20 -20,85 50,97
-                                        C 120,80 87,20 95,3 z"  />
-                                  </svg>
-                                TRADE GOODS (SILVER)
+                            <div class="col-4 storage-bin position-relative px-0" id="storage-silver">
+
+                                <div class="storage-clipped position-absolute" id="storage-silver-clipped">
+                                    <svg class="position-absolute" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <clipPath id="silver-clippath" clipPathUnits="objectBoundingBox">
+                                            <path d="M .15,.20
+                                                       V .97
+                                                       H .85
+                                                      V .20
+                                                      Q .50,-.05 .15,.20 z" />
+                                        </clipPath>
+                                    </svg>
+                                    <div class="w-100 position-absolute attribute-label hp-summary-label"id="storage-silver-label">
+                                        <div id="silver-label">TRADE GOODS (SILVER)</div>
+                                    </div>
+                                </div>
+                                <div class="storage position-absolute" id="silver-container">
+                                    <svg class="position-absolute" id="silver-drawing" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 5,20
+                                           V 97
+                                           H 95
+                                           V 20
+                                           Q 50,-5 5, 20 z" />
+                                        <path d="M 35,7
+                                             Q 50,37 65,7"></path>
+                                    </svg>
+                                </div>
+
                             </div>
-                            <div class="col storage-bin" id="storage-materials">
-                                <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">  
-                                    <path fill="transparent"
-                                        d="M 5,3
+                            <div class="col-5 storage-bin position-relative px-0" id="storage-materials">
+                                <svg class="position-absolute" id="defense-shield" viewBox="0 0 100 100"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="transparent" d="M 5,3
                                         C 13,20 -20,85 50,97
-                                        C 120,80 87,20 95,3 z"  />
-                                  </svg>
-                                MATERIALS &amp; SUNDRY
+                                        C 120,80 87,20 95,3 z" />
+                                </svg>
+                                <div class="w-100 position-absolute attribute-label hp-summary-label"
+                                    id="defense-label">MATERIALS &amp; SUNDRY</div>
                             </div>
                         </div>
                     </div>
