@@ -33,12 +33,8 @@
                 <div class="col-8" id="cs-upper-left">
                     <div class="container input-wrapper my-2" id="character-name-class-level-container">
                         <div class="row row-cols-2" id="character-name-class-input">
-                            <div class="col-7" id="character-name-input">
-                                &nbsp;
-                            </div>
-                            <div class="col-5" id="character-class-level-input">
-                                &nbsp;
-                            </div>
+                            <div class="col-7" id="character-name-input">Rowyn</div>
+                            <div class="col-5" id="character-class-level-input">Ranger - 1</div>
                         </div>
                         <div class="row row-cols-2" id="character-name-class-label">
                             <div class="col-7 cs-field-label" id="character-name-label">CHARACTER NAME</div>
@@ -53,7 +49,7 @@
                                     <div class="col-5 cs-field-label pe-0 h-100 position-absolute type-language-label"
                                         id="character-creature-type-label">CREATURE TYPE</div>
                                     <div class="col cs-field-input h-100 position-absolute w-50"
-                                        id="character-creature-type-input">&nbsp;</div>
+                                        id="character-creature-type-input">Raptor</div>
                                 </div>
                             </div>
                             <div class="col input-wrapper">
@@ -61,7 +57,7 @@
                                     <div class="col-2 cs-field-label pe-0 position-absolute h-100 type-language-label"
                                         id="character-languages-label">LANGUAGES</div>
                                     <div class="col cs-field-input position-absolute h-100 w-75"
-                                        id="character-languages-input">&nbsp;</div>
+                                        id="character-languages-input">Auran (understand, not speak), Birdfolk, Cervan, Jerbeen</div>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +69,9 @@
                             <div class="w-100 position-absolute" id="row-attribute-hexes"></div>
                             <div class="position-relative col h-100" id="attribute-hex-strength">
                                 <div class="hexagon position-absolute"></div>
-                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="hexagon-inner position-absolute">
+                                    <div class="position-absolute attribute-value" id="strength-value">+1</div>
+                                </div>
                                 <div class="pentagon position-absolute"></div>
                                 <div class="position-absolute attribute-label">STRENGTH</div>
                                 <div class="position-absolute attribute-icon"><img src="images/icons/Str_Icon.png"
@@ -81,7 +79,9 @@
                             </div>
                             <div class="position-relative col h-100" id="attribute-hex-dexterity">
                                 <div class="hexagon position-absolute"></div>
-                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="hexagon-inner position-absolute">
+                                    <div class="position-absolute attribute-value" id="dexteriry-value">+3</div>
+                                </div>
                                 <div class="pentagon position-absolute"></div>
                                 <div class="position-absolute attribute-label">DEXTERITY</div>
                                 <div class="position-absolute attribute-icon"><img src="images/icons/Dex_Icon.png"
@@ -89,7 +89,9 @@
                             </div>
                             <div class="position-relative col h-100" id="attribute-hex-constitution">
                                 <div class="hexagon position-absolute"></div>
-                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="hexagon-inner position-absolute">
+                                    <div class="position-absolute attribute-value" id="constitution-value">+1</div>
+                                </div>
                                 <div class="pentagon position-absolute"></div>
                                 <div class="position-absolute attribute-label">CONSTITUTION</div>
                                 <div class="position-absolute attribute-icon"><img src="images/icons/Con_Icon.png"
@@ -97,7 +99,9 @@
                             </div>
                             <div class="position-relative col h-100" id="attribute-hex-intelligence">
                                 <div class="hexagon position-absolute"></div>
-                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="hexagon-inner position-absolute">
+                                    <div class="position-absolute attribute-value" id="intelligence-value">+2</div>
+                                </div>
                                 <div class="pentagon position-absolute"></div>
                                 <div class="position-absolute attribute-label">INTELLIGENCE</div>
                                 <div class="position-absolute attribute-icon"><img src="images/icons/Int_Icon.png"
@@ -105,7 +109,9 @@
                             </div>
                             <div class="position-relative col h-100" id="attribute-hex-wisdom">
                                 <div class="hexagon position-absolute"></div>
-                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="hexagon-inner position-absolute">
+                                    <div class="position-absolute attribute-value" id="wisdom-value">+2</div>
+                                </div>
                                 <div class="pentagon position-absolute"></div>
                                 <div class="position-absolute attribute-label">WISDOM</div>
                                 <div class="position-absolute attribute-icon"><img src="images/icons/Wis_Icon.png"
@@ -113,7 +119,9 @@
                             </div>
                             <div class="position-relative col h-100" id="attribute-hex-charisma">
                                 <div class="hexagon position-absolute"></div>
-                                <div class="hexagon-inner position-absolute"></div>
+                                <div class="hexagon-inner position-absolute">
+                                    <div class="position-absolute attribute-value" id="charisma-value">-1</div>
+                                </div>
                                 <div class="pentagon position-absolute"></div>
                                 <div class="position-absolute attribute-label">CHARISMA</div>
                                 <div class="position-absolute attribute-icon"><img src="images/icons/Cha_Icon.png"
@@ -130,34 +138,50 @@
                         </div>
                         <div class="row cs-tr-light">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-trait-l1">&nbsp;</div>
+                                <div class="cs-table-cell position-relative" id="character-trait-l1">
+                                    <div class="trait-item position-absolute" id="trait-l1-value">Tenacious</div>
+                                </div>
                             </div>
                             <div class="col ps-1 pe-0">
-                                <div class="cs-table-cell" id="character-trait-r1">&nbsp;</div>
+                                <div class="cs-table-cell position-relative" id="character-trait-r1">
+                                    <div class="trait-item position-absolute" id="trait-r1-value">Tenacious</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-trait-l2">&nbsp;</div>
+                                <div class="cs-table-cell position-relative" id="character-trait-l2">
+                                    <div class="trait-item position-absolute" id="trait-l2-value">Tenacious</div>
+                                </div>
                             </div>
                             <div class="col ps-1 pe-0">
-                                <div class="cs-table-cell" id="character-trait-r2">&nbsp;</div>
+                                <div class="cs-table-cell position-relative" id="character-trait-r2">
+                                    <div class="trait-item position-absolute" id="trait-r2-value">Tenacious</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-light">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-trait-l3">&nbsp;</div>
+                                <div class="cs-table-cell position-relative" id="character-trait-l3">
+                                    <div class="trait-item position-absolute" id="trait-l3-value">Tenacious</div>
+                                </div>
                             </div>
                             <div class="col ps-1 pe-0">
-                                <div class="cs-table-cell" id="character-trait-r3">&nbsp;</div>
+                                <div class="cs-table-cell position-relative" id="character-trait-r3">
+                                    <div class="trait-item position-absolute" id="trait-r3-value">Tenacious</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-trait-l4">&nbsp;</div>
+                                <div class="cs-table-cell position-relative" id="character-trait-l4">
+                                    <div class="trait-item position-absolute" id="trait-l4-value">Tenacious</div>
+                                </div>
                             </div>
                             <div class="col ps-1 pe-0">
-                                <div class="cs-table-cell" id="character-trait-r4">&nbsp;</div>
+                                <div class="cs-table-cell position-relative" id="character-trait-r4">
+                                    <div class="trait-item position-absolute" id="trait-r4-value">Tenacious</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -278,14 +302,10 @@
                     <div class="container my-2 position-relative">
                         <div class="row">
                             <div class="col-4 input-wrapper px-0">
-                                <div class="row mx-0" id="character-experience-input">
-                                    <div class="col px-0" id="character-experience-current">
-
-                                    </div>
+                                <div class="row mx-0 exp-value" id="character-experience-input">
+                                    <div class="col px-0" id="character-experience-current">1</div>
                                     /
-                                    <div class="col px-0" id="character-experience-to-level">
-
-                                    </div>
+                                    <div class="col px-0 exp-value" id="character-experience-to-level">2</div>
                                 </div>
                                 <div class="row mx-0">
                                     <div class="col-12 cs-field-label" id="character-experience-label">EXPERIENCE</div>
@@ -305,14 +325,20 @@
                             <div class="col-4 position-relative">
                                 <div class="renown-pentagon-dark position-absolute"></div>
                                 <div class="renown-pentagon-light position-absolute"></div>
-                                <div class="renown-pentagon-white position-absolute"></div>
+                                <div class="renown-pentagon-white position-absolute">
+                                    <div class="position-absolute" id="renown-value">3</div>
+                                </div>
                                 <div class="position-absolute" id="renown-bonus-label">+</div>
                                 <div class="position-absolute" id="renown-label">RENOWN</div>
                             </div>
                             <div class="col-3 position-relative">
                                 <div class="inspiration-rhombus-dark position-absolute"></div>
                                 <div class="inspiration-rhombus-light position-absolute"></div>
-                                <div class="inspiration-pentagon-white position-absolute"></div>
+                                <div class="inspiration-pentagon-white position-absolute">
+                                    <div class="form-check position-relative w-100 h-100 p-0" id="inspiration-wrapper">
+                                        <input class="form-check-input input-box position-absolute m-0" type="checkbox" id="inspiration-check" value="inspiration">
+                                    </div>
+                                </div>
                                 <div class="position-absolute" id="inspiration-label">INSP</div>
                             </div>
                         </div>
@@ -326,62 +352,86 @@
                         </div>
                         <div class="row cs-tr-light">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-1">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-1">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-2">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-2">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-light">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-3">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-3">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-4">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-4">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-light">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-5">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-5">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-6">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-6">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-light">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-7">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-7">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-8">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-8">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-light">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-9">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-9">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-10">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-10">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-light">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-11">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-11">Investigation</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row cs-tr-dark">
                             <div class="col ps-0 pe-1">
-                                <div class="cs-table-cell" id="character-skill-12">&nbsp;</div>
+                                <div class="cs-table-cell position-relative">
+                                    <div class="skill-value position-absolute" id="character-skill-12">Investigation</div>
+                                </div>
                             </div>
                         </div>
                     </div>
